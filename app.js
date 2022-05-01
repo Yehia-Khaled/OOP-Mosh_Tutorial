@@ -101,7 +101,8 @@ Circle.call({},1) //exactly in line 98
 Circle.apply({}, [1,2,3]) //same as line 99 but when we have multiple argument add them to array
 */
 
-/*Lecture Value vs Reference Types*/
+/*
+/!*Lecture Value vs Reference Types*!/
 //Value type
 let x =10;
 let y=x;
@@ -122,4 +123,22 @@ function increase(obj){
     obj.value++;
 }
 increase(obj);
-console.log('obj',obj);
+console.log('obj',obj);*/
+
+/*Lecture Adding/Removing Properties*/
+function Circle(radius){
+    this.raduis= radius;
+    this.draw=function (){
+        console.log('draw');
+    };
+}
+const circle=new Circle(10);
+
+circle.location={x:1};
+
+const propertyName='center location'; //can't use . notation when use space between words or _ -
+circle[propertyName]={x:2}
+
+//Removing property
+delete circle.location; //OR delete circle[location];
+console.log(circle);
