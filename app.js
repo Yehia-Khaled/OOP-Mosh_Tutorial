@@ -1,4 +1,4 @@
-                          /*Benefits of OOP*/
+                            /*Benefits of OOP*/
 /*/!* 1- Encapsulation: Reduce Complexity + Increase resuability*!/
 
 //the default method property and function didn't related to other
@@ -22,9 +22,7 @@ employee.getWage();
 */
 
 /*2- Abstraction: Reduce Complexity + isolate impact of Changes*/
-
 /*3- Inheritance: Eliminate redundant code*/
-
 /*4- Polymorphism: Refactor ugly switch/case statements */
 
-
+// console.log('Hello World!')
