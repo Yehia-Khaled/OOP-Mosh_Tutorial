@@ -26,7 +26,9 @@ employee.getWage();
 /*4- Polymorphism: Refactor ugly switch/case statements */
 
 // console.log('Hello World!')
-/*Lecture Object Literals*/
+
+/*
+/!*Lecture Object Literals*!/
 const circle={
   radius:1,//properties used  to hold values
   location:{
@@ -38,3 +40,16 @@ const circle={
   }
 };
 circle.draw();
+*/
+
+/*Lecture Factories */
+function createCircle(radius){
+  return{
+          radius,//equivalent to radius:radius
+          draw:function (){ //Function or Method use to define some logic
+              console.log('draw');
+          }
+  };
+}
+const circle=createCircle(1)
+circle.draw()
