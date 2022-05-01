@@ -42,7 +42,8 @@ const circle={
 circle.draw();
 */
 
-/*Lecture Factories */
+/*
+/!*Lecture Factories *!/
 //factory function : when use return with function.
 function createCircle(radius){
   return{
@@ -54,8 +55,10 @@ function createCircle(radius){
 }
 const circle=createCircle(1)
 circle.draw()
+*/
 
-/*Lecture Constructors*/
+/*
+/!*Lecture Constructors*!/
 //Constructor Function :when use 'this' operator with 'new' operator
 function Circle(radius){
     // console.log('this',this);
@@ -65,11 +68,33 @@ function Circle(radius){
     };
 }
 const another =new Circle(1); //when type new -create impiety object, -set this to point to this object - return that object from this function
+*/
 
-/*Lecture Constructor property*/
+/*
+/!*Lecture Constructor property*!/
 //23:28
 let x={}; //let x = new object();
 
 new String(); // '', "", ``
 new Boolean(); // true, false
-new Number(); //1, 2, 3, ...
+new Number(); //1, 2, 3, ...*/
+
+/*Lecture Functions are Objects*/
+function Circle(radius){
+    this.raduis= radius;
+    this.draw=function (){
+        console.log('draw');
+    };
+}
+
+/*const Circle1=new Function('radius',`
+    this.raduis= radius;
+    this.draw=function (){
+        console.log('draw');
+    }`);
+
+const circle= new Circle1(1);*/
+
+const another=new Circle(1);
+Circle.call({},1) //exactly in line 98
+Circle.apply({}, [1,2,3]) //same as line 99 but when we have multiple argument add them to array
