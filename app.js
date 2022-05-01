@@ -1,4 +1,4 @@
-                            /*Benefits of OOP*/
+/*Benefits of OOP*/
 /*/!* 1- Encapsulation: Reduce Complexity + Increase resuability*!/
 
 //the default method property and function didn't related to other
@@ -42,7 +42,8 @@ const circle={
 circle.draw();
 */
 
-/*Lecture Factories */
+/*/!*Lecture Factories *!/
+//factory function : when use return with function.
 function createCircle(radius){
   return{
           radius,//equivalent to radius:radius
@@ -52,4 +53,16 @@ function createCircle(radius){
   };
 }
 const circle=createCircle(1)
-circle.draw()
+circle.draw()*/
+
+/*Lecture Constructors*/
+//Constructor Function :when use 'this' operator with 'new' operator
+function Circle(radius){
+    // console.log('this',this);
+    this.raduis= radius;
+    this.draw=function (){ //Function or Method use to define some logic
+        console.log('draw');
+        };
+}
+const another =new Circle(1); //when type new -create impiety object, -set this to point to this object - return that object from this function
+
