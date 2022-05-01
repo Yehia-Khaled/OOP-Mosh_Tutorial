@@ -125,7 +125,8 @@ function increase(obj){
 increase(obj);
 console.log('obj',obj);*/
 
-/*Lecture Adding/Removing Properties*/
+/*
+/!*Lecture Adding/Removing Properties*!/
 function Circle(radius){
     this.raduis= radius;
     this.draw=function (){
@@ -141,4 +142,24 @@ circle[propertyName]={x:2}
 
 //Removing property
 delete circle.location; //OR delete circle[location];
-console.log(circle);
+console.log(circle);*/
+
+/*Lecture Enumerating Properties*/
+function Circle(radius){
+    this.radius= radius;
+    this.draw=function (){
+        console.log('draw');
+    };
+}
+const circle=new Circle(10);
+
+for (let key in circle){
+    if(typeof circle[key] !== 'function')
+        console.log(key,circle[key]);
+}
+
+const keys=Object.keys(circle);
+console.log(keys);
+
+if ('radius' in circle)  //Check the existence of key or property
+    console.log('Circle has a radius. ');
