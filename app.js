@@ -26,3 +26,15 @@ employee.getWage();
 /*4- Polymorphism: Refactor ugly switch/case statements */
 
 // console.log('Hello World!')
+/*Lecture Object Literals*/
+const circle={
+  radius:1,//properties used  to hold values
+  location:{
+      x:1,
+      y:1
+  },
+  draw:function (){ //Function or Method use to define some logic
+      console.log('draw');
+  }
+};
+circle.draw();
