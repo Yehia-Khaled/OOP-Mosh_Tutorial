@@ -79,7 +79,8 @@ new String(); // '', "", ``
 new Boolean(); // true, false
 new Number(); //1, 2, 3, ...*/
 
-/*Lecture Functions are Objects*/
+/*
+/!*Lecture Functions are Objects*!/
 function Circle(radius){
     this.raduis= radius;
     this.draw=function (){
@@ -87,14 +88,38 @@ function Circle(radius){
     };
 }
 
-/*const Circle1=new Function('radius',`
+/!*const Circle1=new Function('radius',`
     this.raduis= radius;
     this.draw=function (){
         console.log('draw');
     }`);
 
-const circle= new Circle1(1);*/
+const circle= new Circle1(1);*!/
 
 const another=new Circle(1);
 Circle.call({},1) //exactly in line 98
 Circle.apply({}, [1,2,3]) //same as line 99 but when we have multiple argument add them to array
+*/
+
+/*Lecture Value vs Reference Types*/
+//Value type
+let x =10;
+let y=x;
+
+x=20;
+//reference type
+let X={value:10};
+let Y=X;
+X.value=20;
+console.log(' x',x,'\n','y',y)
+console.log(' X',X,'\n','Y',Y)
+//Primitives :are copied by their Value
+//objects: are copied by their reference
+
+let obj={value:10};
+
+function increase(obj){
+    obj.value++;
+}
+increase(obj);
+console.log('obj',obj);
