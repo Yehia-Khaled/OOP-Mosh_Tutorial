@@ -42,7 +42,7 @@ const circle={
 circle.draw();
 */
 
-/*/!*Lecture Factories *!/
+/*Lecture Factories */
 //factory function : when use return with function.
 function createCircle(radius){
   return{
@@ -53,7 +53,7 @@ function createCircle(radius){
   };
 }
 const circle=createCircle(1)
-circle.draw()*/
+circle.draw()
 
 /*Lecture Constructors*/
 //Constructor Function :when use 'this' operator with 'new' operator
@@ -62,7 +62,14 @@ function Circle(radius){
     this.raduis= radius;
     this.draw=function (){ //Function or Method use to define some logic
         console.log('draw');
-        };
+    };
 }
 const another =new Circle(1); //when type new -create impiety object, -set this to point to this object - return that object from this function
 
+/*Lecture Constructor property*/
+//23:28
+let x={}; //let x = new object();
+
+new String(); // '', "", ``
+new Boolean(); // true, false
+new Number(); //1, 2, 3, ...
