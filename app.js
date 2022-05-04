@@ -189,7 +189,8 @@ const circle=new Circle(10);
 circle.computeOptimumLocation();
 circle.draw();*/
 
-/*Lecture Private Properties and Methods*/
+/*
+/!*Lecture Private Properties and Methods*!/
 function Circle(radius){
 
     // let color ='red';
@@ -212,4 +213,35 @@ function Circle(radius){
 }
 const circle=new Circle(10);
 
+circle.draw();
+*/
+
+/*Lecture Getters/Setters*/
+function Circle(radius){
+    this.radius= radius;
+    let defaultLocation={x:0,y:0};
+
+    this.getDefaultLocation=function (){
+        return defaultLocation; //access default location as key but can't edit it/ recall it as method
+    };
+
+    this.draw=function (){
+        console.log('draw');
+    };
+
+    Object.defineProperty(this,'defaultLocation',{
+        get: function (){
+            return defaultLocation; //access using getter and setter  as line 224 :226
+        },
+        set:function (value){
+            if (!value.x || !value.y)
+                throw new Error('Invalid location');
+            defaultLocation=value;
+        }
+    })
+}
+const circle=new Circle(10);
+// circle.getDefaultLocation();
+console.log(circle.defaultLocation)
+// circle.defaultLocation=1; //throw an error invalid location
 circle.draw();
