@@ -166,7 +166,8 @@ if ('radius' in circle)  //Check the existence of key or property
     console.log('Circle has a radius. ');
 */
 
-/*Lecture Abstraction*/
+/*
+/!*Lecture Abstraction*!/
 function Circle(radius){
     this.radius= radius;
 
@@ -186,4 +187,29 @@ const circle=new Circle(10);
 
 // circle.defaultLocation=false;
 circle.computeOptimumLocation();
+circle.draw();*/
+
+/*Lecture Private Properties and Methods*/
+function Circle(radius){
+
+    // let color ='red';
+
+    this.radius= radius;
+
+    let defaultLocation={x:0,y:0}; //define as local variable can't access outside function /object
+
+    let computeOptimumLocation =function(){
+        // ...
+    }
+
+    this.draw=function (){
+        computeOptimumLocation();
+        //defaultLocation
+        //this.radius
+
+        console.log('draw');
+    };
+}
+const circle=new Circle(10);
+
 circle.draw();
