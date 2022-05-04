@@ -216,7 +216,8 @@ const circle=new Circle(10);
 circle.draw();
 */
 
-/*Lecture Getters/Setters*/
+/*
+/!*Lecture Getters/Setters*!/
 function Circle(radius){
     this.radius= radius;
     let defaultLocation={x:0,y:0};
@@ -244,4 +245,6 @@ const circle=new Circle(10);
 // circle.getDefaultLocation();
 console.log(circle.defaultLocation)
 // circle.defaultLocation=1; //throw an error invalid location
-circle.draw();
+circle.draw();*/
+
+/*Exercise: Stop Watch*/
